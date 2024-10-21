@@ -7,9 +7,9 @@ def update_pixel(image_path):
     print(img.shape)
 
     # Change first 100 rows to random pixels
-    #for i in range(100):
-	#    for j in range(img.shape[1]):
-	#	    img[i][j] = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)]
+    for i in range(100):
+	    for j in range(img.shape[1]):
+		    img[i][j] = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)]
 
     # Copy part of image
     tag = img[150:200, 90:130]
@@ -18,7 +18,6 @@ def update_pixel(image_path):
     cv2.imshow('Image', img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-
 
 if __name__ == "__main__":
     # Provide the path to the image file here
